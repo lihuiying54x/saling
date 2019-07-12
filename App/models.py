@@ -47,6 +47,8 @@ class Address(models.Model):
         db_table = 'df_address'
         verbose_name = '地址'
         verbose_name_plural = verbose_name
+    def __str__(self):
+        return self.receiver
 class GoodsType(models.Model):
     '''商品类型模型类'''
     name = models.CharField(max_length=20, verbose_name='种类名称')
